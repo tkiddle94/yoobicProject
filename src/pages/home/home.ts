@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FilmApiServiceProvider } from '../../providers/film-api-service/film-api-service';
-import { FilmComponent } from '../../components/film/film';
 import { DetailPage } from '../detail/detail';
 import { AlertController } from 'ionic-angular';
 

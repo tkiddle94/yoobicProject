@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http'
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { HttpClientModule} from '@angular/common/http';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -20,7 +19,6 @@ import { DetailPage } from '../pages/detail/detail';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     LoginPage,
     DetailPage,
   ],
@@ -34,7 +32,6 @@ import { DetailPage } from '../pages/detail/detail';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     LoginPage,
     DetailPage,
   ],
