@@ -23,6 +23,7 @@ export class DetailPage {
   }
 
   ionViewDidLoad() {
+    //Get the selected film data on view load
    console.log(this.navParams.get('overview'));
    this.title = this.navParams.get('title');
    this.image = this.navParams.get('image');

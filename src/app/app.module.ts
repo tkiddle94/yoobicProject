@@ -15,13 +15,14 @@ import { DetailPage } from '../pages/detail/detail';
 
 
 
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
     LoginPage,
-    DetailPage
+    DetailPage,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,7 @@ import { DetailPage } from '../pages/detail/detail';
     HomePage,
     ListPage,
     LoginPage,
-    DetailPage
+    DetailPage,
   ],
   providers: [
     StatusBar,

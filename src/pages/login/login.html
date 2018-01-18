@@ -8,23 +8,20 @@
   <div text-center>
     <br>
     <h1>Welcome</h1>
-    <h3>This app will show you the current most popular films according to IMDB!</h3>
+    <h3>This app will show you most popular films in a selected year!</h3>
+    <br><br>
+      <ion-list>
+
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="username" placeholder="Username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="password" [(ngModel)]="password" placeholder="Password"></ion-input>
+        </ion-item>
+
+      </ion-list>
     <br>
-    <br>
-<ion-list>
-
-  <ion-item>
-    <ion-input type="text" [(ngModel)]="username" placeholder="Username"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-input type="password" [(ngModel)]="password" placeholder="Password"></ion-input>
-  </ion-item>
-
-</ion-list>
-<br>
-<button ion-button (click)='openFilters()'>Login
-  
-</button>
-</div>
+    <button ion-button (click)='openFilters()'>Login </button>
+  </div>
 </ion-content>

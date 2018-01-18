@@ -6,6 +6,8 @@ import { DetailPage } from '../detail/detail';
 import { AlertController } from 'ionic-angular';
 
 
+
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -17,6 +19,7 @@ export class HomePage {
  public year: '2017';
 
  filmData: Array<{title: string, image: string, overview: string, releaseDate: String}>;
+
   
 public imageURL = 'https://image.tmdb.org/t/p/w500';
 
@@ -24,13 +27,13 @@ public imageURL = 'https://image.tmdb.org/t/p/w500';
     this.loadFilm();
   }
 
- testFunction(){
-   
-  this.filmApiService.yearChange(this.year);
-  this.loadFilm();
-  
- }
+  //function called upon when the user changes the selected year
+  yearChange(){
+    this.filmApiService.yearChange(this.year);
+    this.loadFilm();
+  }
 
+  //function used to load the film data from TMDB API
   loadFilm(){
     this.filmData = [];
     this.filmApiService.getFilms().subscribe(data =>{
@@ -49,9 +52,9 @@ public imageURL = 'https://image.tmdb.org/t/p/w500';
  
   } 
   
+  //sends the user to the detail page upon click
   itemTapped(filmData) {
     console.log(filmData);
     this.navCtrl.push(DetailPage, filmData);
   }
-  
 }
