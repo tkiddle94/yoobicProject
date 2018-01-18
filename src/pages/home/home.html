@@ -1,0 +1,40 @@
+  
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Popular Films by Year</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class ="has-header" padding>  
+
+
+<div text-center>
+    <h4>{{year}}</h4>
+    <ion-item>
+      
+        <ion-range min="1900" max="2018" [(ngModel)]="year" color="primary">
+          <ion-label range-left>1900</ion-label>
+          <ion-label range-right>2018</ion-label>
+        </ion-range>
+      </ion-item>
+
+<button ion-button (click)="testFunction()" align = "right">Refresh</button>
+</div>
+<ion-card  *ngFor="let filmData of filmData" class="card-background-page">
+    <button (click)="itemTapped(filmData)">
+      <div text-center> 
+      <img src="{{filmData.image}}">
+      
+      <ion-card-content style = "font-size: 150%;">
+      {{filmData.title}}
+      </ion-card-content>
+      </div>
+    </button>
+</ion-card>
+
+</ion-content>
